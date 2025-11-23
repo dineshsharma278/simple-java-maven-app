@@ -13,6 +13,19 @@ on:
           required: true
           default: dinesh
 
+ workflow-call:
+    inputs:
+       port:
+          description: Neeeded 
+          required: true
+          default: 12345
+
+       name:
+          description: can give anything 
+          required: true
+          default: dinesh    
+          
+
 jobs:
     echo-input:
       runs-on: ubuntu-latest
