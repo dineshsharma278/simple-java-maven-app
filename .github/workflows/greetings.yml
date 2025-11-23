@@ -17,6 +17,6 @@ jobs:
     echo-input:
       runs-on: ubuntu-latest
       steps: 
-         -name: echo given input 
-          run: |
+         - name: echo given input 
+           run: |
                echo Hi Hello ...... ${{github.event.input.port}}  ${{github.event.input.name}}     
