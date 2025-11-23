@@ -4,12 +4,14 @@ on:
  workflow_dispatch:
     inputs:
        port:
-          description: Neeeded 
+          description: Neeeded
+          type: string
           required: true
           default: 12345
 
        name:
-          description: can give anything 
+          description: can give anything
+          type: string
           required: true
           default: dinesh
 
