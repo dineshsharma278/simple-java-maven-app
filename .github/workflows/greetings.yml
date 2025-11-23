@@ -7,7 +7,7 @@ on:
           description: Neeeded
           type: string
           required: true
-          default: 12345
+          default: dffd
 
        name:
           description: can give anything
@@ -18,13 +18,15 @@ on:
  workflow_call:
     inputs:
        port:
-          description: Neeeded 
+          description: Neeeded
+          type: string 
           required: true
-          default: 12345
+          default: erer
 
        name:
           description: can give anything 
           required: true
+          type: string
           default: dinesh    
           
 
