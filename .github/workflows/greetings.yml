@@ -9,9 +9,9 @@ on:
           default: 12345
 
        name:
-       description: can give anything 
-       required: true
-       default: dinesh
+          description: can give anything 
+          required: true
+          default: dinesh
 
 jobs:
     echo-input:
@@ -19,4 +19,4 @@ jobs:
       steps: 
          - name: echo given input 
            run: |
-               echo Hi Hello ...... ${{github.event.input.port}}  ${{github.event.input.name}}     
+               echo "Hi Hello ...... ${{github.event.input.port}}  ${{github.event.input.name}}"     
