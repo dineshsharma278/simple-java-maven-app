@@ -2,7 +2,7 @@ name: my First workflow
 
 on:
  workflow_dispatch:
-    input:
+    inputs:
        port:
           description: Neeeded 
           required: true
