@@ -13,7 +13,7 @@ on:
           required: true
           default: dinesh
 
- workflow-call:
+ workflow_call:
     inputs:
        port:
           description: Neeeded 
