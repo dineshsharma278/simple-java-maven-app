@@ -1,0 +1,22 @@
+name: my First workflow 
+
+on:
+ workflow_dispatch:
+    input:
+       port:
+          description: Neeeded 
+          required: true
+          default: 12345
+
+       name:
+       description: can give anything 
+       required: true
+       default: dinesh
+
+jobs:
+    echo-input:
+      runs-on: ubuntu-latest
+      steps: 
+         -name: echo given input 
+          run: |
+               echo Hi Hello ...... ${{github.event.input.port}}  ${{github.event.input.name}}     
