@@ -20,12 +20,10 @@ on:
        port:
           description: Neeeded
           type: string 
-          required: true
           default: erer
 
        name:
           description: can give anything 
-          required: true
           type: string
           default: dinesh    
           
