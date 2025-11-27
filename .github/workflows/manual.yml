@@ -34,6 +34,6 @@ jobs:
   second-job:
        uses: ./.github/workflows/greetings.yml
        with: 
-          port: ${{input.port}}
-          name: ${{input.name}}
+          port: ${{inputs.port}}
+          name: ${{inputs.name}}
       
