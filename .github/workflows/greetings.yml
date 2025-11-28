@@ -2,7 +2,7 @@ name: my First workflow
 
 on:
   workflow_run:
-    workflows: [ "manual" ]
+    workflows: [ "Manual workflow" ]
     types: [ completed ]
 
   workflow_dispatch:
