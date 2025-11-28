@@ -31,9 +31,7 @@ jobs:
     - name: Send greeting
       run: echo "Hello ${{ inputs.name }}"
 
-  second-job:
-       uses: ./.github/workflows/greetings.yml
-       with: 
+  
           port: ${{inputs.port}}
           name: ${{inputs.name}}
       
