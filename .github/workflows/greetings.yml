@@ -22,7 +22,7 @@ on:
     
           
 
-  jobs:
+jobs:
     echo-input:
       runs-on: ubuntu-latest
       if: |
