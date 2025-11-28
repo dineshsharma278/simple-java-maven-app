@@ -1,7 +1,11 @@
 name: my First workflow 
 
 on:
- workflow_dispatch:
+  workflow_run:
+    workflows: [ "manual" ]
+    types: [ completed ]
+
+  workflow_dispatch:
     inputs:
        port:
           description: Neeeded
@@ -15,23 +19,22 @@ on:
           required: true
           default: dinesh
 
- workflow_call:
-    inputs:
-       port:
-          description: Neeeded
-          type: string 
-          default: erer
-
-       name:
-          description: can give anything 
-          type: string
-          default: dinesh    
+    
           
 
-jobs:
+  jobs:
     echo-input:
       runs-on: ubuntu-latest
+      if: |
+       github.event_name == 'workflow_dispatch' ||
+       (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
+
+      env: 
+        port: ${{ inputs.port   || 'dffd' }}
+        name: ${{ inputs.name   || 'dinesh' }}
+
       steps: 
-         - name: echo given input 
-           run: |
-               echo "Hi Hello ...... ${{github.event.inputs.port}}  ${{github.event.inputs.name}}"     
+        - name: running-second-job
+          run: |
+           echo  "port : $port"
+           echo "name : $name"  
